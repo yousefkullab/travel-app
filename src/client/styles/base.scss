@@ -2,13 +2,19 @@
 body{
     color: blueviolet;
     background: aliceblue;
-    font-size: 32px;
+    font-size: 16px;
     margin: 20px;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
 
     h1{
-        font-size: 2em;
+        font-size: 3em;
+    }
+
+    main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
