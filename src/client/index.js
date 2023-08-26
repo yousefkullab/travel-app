@@ -1,4 +1,4 @@
-import { handleSubmit } from './js/handleSubmit'
+import { handleSubmit } from './js/formHandler'
 import { countDown } from './js/countDown'
 
 import './styles/base.scss'

@@ -18,16 +18,16 @@
     <main>
         <section>
             <h1>Travel App</h1>
-            <form action="">
+            <form onsubmit="return Client.handleSubmit(event)"">
                     <div>
-                        <label for="date">Place: </label>
-                        <input type="text" id="place" name="place" placeholder="Place" required>
+                        <label for="city">Place: </label>
+                        <input type="text" id="city" name="city" placeholder="City Name" required>
                     </div>
                     <div>
                         <label for="date">Date: </label>
                         <input type="date"  id="date" name="date" required>
                     </div>
-                    <input type="submit" value="Show details">
+                    <button onclick="return Client.handleSubmit(event)">Show details</button>
             </form>
         </section>
 

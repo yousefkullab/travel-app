@@ -28,6 +28,12 @@ app.get('/test', (req, res) =>{
     res.json(mockAPIResponse);
 });
 
+app.post('/travel-data', (req, res) =>{
+    const data = req.body;
+    console.log(data);
+    res.json(data)
+});
+
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 });
