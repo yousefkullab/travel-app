@@ -37,7 +37,6 @@ The travel app project is a full-stack web application built using HTML, CSS, Ja
 - Weatherbit API for retrieving weather data.
 - Pixabay API for fetching location images.
 
-
 ## Getting Started
 
 1. Clone the repository: `git clone https://github.com/your-username/travel-app.git`
@@ -62,16 +61,17 @@ This project uses external APIs that require API keys. To set up the API keys:
 
 1. Sign up for API keys from the following services:
 
-- [Geonames](http://www.geonames.org/export/web-services.html)
-- [WeatherBit](https://www.weatherbit.io/account/create)
-- [Pixabay](https://pixabay.com/api/docs/)
+   - [Geonames](http://www.geonames.org/export/web-services.html)
+   - [WeatherBit](https://www.weatherbit.io/account/create)
+   - [Pixabay](https://pixabay.com/api/docs/)
 
 2. Create a .env file in the project root and add your API keys:
-- `username_geonames=your_geonames_username`
-- `api_key_weatherbit=your_weatherbit_api_key`
-- `api_key_pixabay=your_pixabay_api_key`
+   - `username_geonames=your_geonames_username`
+   - `api_key_weatherbit=your_weatherbit_api_key`
+   - `api_key_pixabay=your_pixabay_api_key`
+
+**Note:** Ensure that `.env` is added to your `.gitignore` to keep your API keys secure.
 
 ## License
 
 © Yousef Kullab
-
