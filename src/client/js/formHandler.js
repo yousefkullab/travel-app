@@ -7,7 +7,8 @@ async function handleSubmit(event){
     const days_left = Client.countDown(travel_date);
     const img = document.getElementById('image');
     const temp = document.getElementById('temp');
-    const desc = document.getElementById('desc');
+    const description = document.getElementById('description');
+    const countdown = document.getElementById('countdown');
 
     console.log("::: Form Submitted :::");
     const response = await fetch('http://localhost:3000/travel-data',{
@@ -25,10 +26,11 @@ async function handleSubmit(event){
         console.log(data);
         // Update UI with the data
         const { image, weather } = data;
-        img.src = image;
-        temp.innerHTML = `Temperature ${weather.temp}`;
-        desc.innerHTML = `Description ${weather.desc}`;
-        return data
+        console.log(image.image);
+        img.src = image.image;
+        temp.innerHTML = `<h3>Temperature: ${weather.temp}</h3>`;
+        description.innerHTML = `<h3>Description: ${weather.description}</h3>`;
+        countdown.innerHTML = `<h3>Days Left: ${days_left}</h3>`;
     }catch(err){
         console.log(`Error when handle form ${err}`);
     }

@@ -43,13 +43,52 @@ const get_coordinates = async(city) =>{
     }
 }
 
-app.post('/travel-data', (req, res) =>{
-    const data = req.body;
-    get_coordinates(data.city)
-    .then(coordinates => {
-        console.log(coordinates);
-        res.json(data);
-    })
+const get_weather = async(lat, lon, days_left) =>{
+    if (days_left <= 7){
+        const url = encodeURI(`https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${process.env.api_key_weatherbit}`);
+        try{
+            const res = await fetch(url);
+            const weather_data = await res.json();
+            return weather_data.data[0]
+        
+        }catch(err){
+            console.log(err)
+        }
+    }
+    else{
+        const url = encodeURI(`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&key=${process.env.api_key_weatherbit}`);
+        try{
+            const res = await fetch(url);
+            const weather_data = await res.json();
+            return weather_data.data[0]
+        }catch(err){
+            console.log(err)
+        }
+    }
+}
+
+const get_image = async(city) =>{
+    const url = encodeURI(`https://pixabay.com/api/?key=${process.env.api_key_pixabay}&q=${city}&image_type=photo`);
+    try{
+        const res = await fetch(url);
+        const image_data = await res.json();
+        return {
+            image: image_data.hits[0].webformatURL
+        }
+    }catch(err){
+        console.log(err)
+    }
+}
+
+app.post('/travel-data', async (req, res) =>{
+    const {city, days_left} = req.body;
+    const coordinates = await get_coordinates(city);
+    const weather = await get_weather(coordinates.lat, coordinates.lng, days_left);
+    const image = await get_image(city);
+    return res.send({image, weather:{
+        temp: weather.temp,
+        description: weather.weather.description
+    }})
 });
 
 app.listen(3000, function () {
