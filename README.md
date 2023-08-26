@@ -43,7 +43,7 @@ The travel app project is a full-stack web application built using HTML, CSS, Ja
 1. Clone the repository: `git clone https://github.com/your-username/travel-app.git`
 2. Navigate to the project directory: `cd travel-app`
 3. Install the project dependencies: `npm install`
-4. Set up your API keys (see API Keys).
+4. Set up your API keys (see [API Keys](#api-keys)).
 5. Build the dist folder:
     - For development mode (with source maps and development features): `npm run build-dev`
     - For production mode (optimized and minified code): `npm run build-prod`
