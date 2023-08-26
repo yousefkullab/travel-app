@@ -1,7 +1,0 @@
-function handleSubmit(){
-
-}
-
-function countDown(){
-    
-}

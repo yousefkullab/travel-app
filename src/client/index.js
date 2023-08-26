@@ -1,8 +1,10 @@
-import { handleSubmit } from './js/app'
-import { countDown } from './js/app'
+import { handleSubmit } from './js/handleSubmit'
+import { countDown } from './js/countDown'
 
 import './styles/base.scss'
 import './styles/form.scss'
+import './styles/header.scss'
+import './styles/footer.scss'
 
 export{
     handleSubmit,

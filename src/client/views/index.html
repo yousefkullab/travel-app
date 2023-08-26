@@ -7,20 +7,44 @@
     <script type="text/javascript" src="../../../dist/main.js"></script>
 </head>
 <body>
-        <h1>Travel App</h1>
-        <form action="">
-                <div>
-                    <label for="date">Place: </label>
-                    <input type="text" id="place" name="place" placeholder="Place" required>
-                </div>
-                <div>
-                    <label for="date">Date: </label>
-                    <input type="date"  id="date" name="date" required>
-                </div>
-                <input type="submit" value="Show details">
-        </form>
-        <div id="results">
+    <header>
+        <div class="">
+            Logo
         </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Travel App</h1>
+            <form action="">
+                    <div>
+                        <label for="date">Place: </label>
+                        <input type="text" id="place" name="place" placeholder="Place" required>
+                    </div>
+                    <div>
+                        <label for="date">Date: </label>
+                        <input type="date"  id="date" name="date" required>
+                    </div>
+                    <input type="submit" value="Show details">
+            </form>
+        </section>
+
+        <section>
+            <div id="results">
+                <img id="image" src="" alt="city name">
+                <div id="weather-info">
+                    <div id="temp"></div>
+                    <div id="desc"></div>
+                </div>
+                <div id="countdown"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>This is a footer</p>
+    </footer>
 
     <script>
         // Check that service workers are supported
