@@ -30,7 +30,7 @@ async function handleSubmit(event){
         desc.innerHTML = `Description ${weather.desc}`;
         return data
     }catch(err){
-        console.log(`Error when handel form ${err}`);
+        console.log(`Error when handle form ${err}`);
     }
 }
 
