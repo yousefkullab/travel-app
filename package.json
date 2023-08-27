@@ -4,11 +4,12 @@
   "description": "This project requires you to build out a travel app that, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node src/server/server.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js"
   },
+  "type": "module",
   "jest": {
     "testEnvironment": "jest-environment-jsdom"
   },
@@ -50,7 +51,9 @@
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "supertest": "^6.3.3",
     "terser-webpack-plugin": "^5.3.9",
     "workbox-webpack-plugin": "^7.0.0"
   }
 }
+
