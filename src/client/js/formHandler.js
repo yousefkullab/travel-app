@@ -28,8 +28,8 @@ async function handleSubmit(event){
         const { image, weather } = data;
         console.log(image.image);
         img.src = image.image;
-        temp.innerHTML = `<h3>Temperature: ${weather.temp}</h3>`;
-        description.innerHTML = `<h3>Description: ${weather.description}</h3>`;
+        temp.innerHTML = `<h3>Temp: ${weather.temp}</h3>`;
+        description.innerHTML = `<h3>Desc: ${weather.description}</h3>`;
         countdown.innerHTML = `<h3>Days Left: ${days_left}</h3>`;
     }catch(err){
         console.log(`Error when handle form ${err}`);
