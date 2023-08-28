@@ -43,6 +43,13 @@ form {
 /*** Medium Screens ***/
 
 @media (min-width: 600px) and (max-width:900px) {
+
+    form {
+        input {
+            font-size: 1.2em;
+            width: 40vw;
+        }
+    }
 }
 
 /*** Large Screens ***/

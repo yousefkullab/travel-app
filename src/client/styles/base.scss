@@ -51,6 +51,20 @@ body{
 /*** Medium Screens ***/
 
 @media (min-width: 600px) and (max-width:900px) {
+
+    body{
+        h1{
+            font-size: 2.7em;
+        }
+
+        .box1{
+            min-width: 50vw;
+        }
+        
+        .box2{
+            min-width: 50vw;
+        }
+    }
 }
 
 /*** Large Screens ***/
