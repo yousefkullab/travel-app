@@ -37,13 +37,11 @@ form {
     input[type="date"]{
         margin-left: 15px;
     }
-
 }
 
 /*** Medium Screens ***/
 
 @media (min-width: 600px) and (max-width:900px) {
-
     form {
         input {
             font-size: 1.2em;
@@ -55,4 +53,12 @@ form {
 /*** Large Screens ***/
 
 @media (min-width:901px) {
+    form {
+        height: 45vh;
+        width: 40vw;
+        input {
+            width: 20vw;
+        }
+    }
 }
+

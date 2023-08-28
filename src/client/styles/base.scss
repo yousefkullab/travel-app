@@ -51,7 +51,6 @@ body{
 /*** Medium Screens ***/
 
 @media (min-width: 600px) and (max-width:900px) {
-
     body{
         h1{
             font-size: 2.7em;
@@ -70,4 +69,37 @@ body{
 /*** Large Screens ***/
 
 @media (min-width:901px) {
+    body{
+        h1{
+            font-size: 3em;
+        }
+    
+        main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .box1{
+            max-width: 30vw;
+        }
+        
+        .box2{
+            max-width: 30vw;
+            margin-right: 30px;
+            
+        }
+    
+        #results{
+            display: flex;
+            align-items: center; 
+            flex-direction: column;
+        }
+    
+        img{
+            width: 35vw;
+            height: 40vh;
+        }
+    }
 }
